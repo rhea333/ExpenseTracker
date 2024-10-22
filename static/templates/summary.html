@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Financial Summary</h2>
+<p>Total Income: ${{ summary['income'] }}</p>
+<p>Total Expenses: ${{ summary['expenses'] }}</p>
+<p>Savings: ${{ summary['savings'] }}</p>
+
+<h3>Expenses by Category</h3>
+<ul>
+    {% for category, amount in summary['categories'].items() %}
+        <li>{{ category }}: ${{ amount }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}

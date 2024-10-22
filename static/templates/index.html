@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Welcome to Personal Expense Tracker</h1>
+<p>Track your income and expenses easily.</p>
+<a href="{{ url_for('main.transaction') }}" class="btn">Add New Transaction</a>
+{% endblock %}
